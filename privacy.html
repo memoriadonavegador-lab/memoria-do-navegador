@@ -1,180 +1,239 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Memória do Navegador — Política de Privacidade</title>
-  <style>
-    body {
-      font-family: system-ui, -apple-system, Segoe UI, sans-serif;
-      line-height: 1.7;
-      max-width: 860px;
-      margin: 40px auto;
-      padding: 0 22px;
-      color: #222;
-    }
-    h1 {
-      line-height: 1.2;
-    }
-    h2 {
-      margin-top: 2rem;
-    }
-    small {
-      color: #666;
-    }
-    li {
-      margin: .35rem 0;
-    }
-    .notice {
-      background: #f4f7fb;
-      border-left: 4px solid #4c78ff;
-      padding: 12px 14px;
-    }
-    code {
-      background: #f1f1f1;
-      padding: 2px 4px;
-      border-radius: 4px;
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Memória do Navegador — Política de Privacidade</title>
+<style>
+body{
+  font-family:system-ui,-apple-system,Segoe UI,sans-serif;
+  line-height:1.7;
+  max-width:860px;
+  margin:40px auto;
+  padding:0 22px;
+  color:#222
+}
+h1{line-height:1.2}
+h2{margin-top:2rem}
+small{color:#666}
+.notice{
+  background:#f4f7fb;
+  border-left:4px solid #4c78ff;
+  padding:12px 14px
+}
+code{
+  background:#f1f1f1;
+  padding:2px 4px;
+  border-radius:4px
+}
+</style>
 </head>
 
 <body>
 
-  <h1>Memória do Navegador — Política de Privacidade</h1>
+<h1>Memória do Navegador — Política de Privacidade</h1>
 
-  <small>Versão 1.0.0 · Atualizada em 06/10/2026</small>
+<small>Versão 1.4.14 · Atualizada em 06/10/2026</small>
 
-  <div class="notice">
-    <strong>Resumo:</strong> a extensão foi projetada para guardar cópias de páginas escolhidas pelo usuário.
-    O conteúdo arquivado permanece no dispositivo do usuário e, opcionalmente, em uma pasta escolhida pelo
-    usuário para sincronização pelo Google Drive para computador. O desenvolvedor não recebe nem analisa o conteúdo arquivado.
-  </div>
+<div class="notice">
+<strong>Resumo:</strong>
+a extensão permite que o usuário salve páginas da web para consulta posterior,
+criando cópias locais pesquisáveis e disponíveis offline. O conteúdo arquivado
+permanece no dispositivo do usuário e, opcionalmente, pode ser gravado em uma
+pasta escolhida pelo usuário para sincronização por meio do Google Drive para
+computador. O desenvolvedor não recebe nem analisa o conteúdo arquivado.
+</div>
 
-  <h2>1. Que dados são tratados</h2>
+<h2>1. Dados tratados</h2>
 
-  <p>
-    Quando o usuário salva uma página manualmente ou ativa o salvamento automático, a extensão pode guardar
-    a URL, título, domínio, data e hora, texto visível, estrutura HTML e, quando habilitado, algumas imagens da página.
-    O conteúdo da página pode incluir informações pessoais ou sensíveis que estejam visíveis nela.
-  </p>
+<p>
+Quando o usuário salva uma página manualmente ou utiliza o salvamento automático,
+a extensão pode armazenar a URL, o título, o domínio, a data e a hora do
+salvamento, o texto visível e a estrutura HTML da página. A extensão também
+captura regras de CSS acessíveis à página para preservar melhor sua aparência.
+</p>
 
-  <p>
-    Para reduzir riscos, a cópia remove scripts, vídeos, áudio, frames, formulários e campos editáveis antes de ser armazenada.
-    Isso não garante que todo dado pessoal exibido na página será removido.
-  </p>
+<p>
+A versão atual não baixa nem arquiva deliberadamente imagens ou outros recursos
+externos. Por esse motivo, imagens, vídeos e outros recursos externos podem não
+estar disponíveis na cópia offline. O conteúdo arquivado pode conter informações
+pessoais ou sensíveis que estavam presentes na página original.
+</p>
 
-  <h2>2. Como os dados são usados</h2>
+<p>
+A captura é realizada na página ativa utilizando as APIs de scripting do Chrome
+e o DOM da página. Quando o processamento detalhado não é possível, a extensão
+pode utilizar um mecanismo de contingência para produzir a cópia da página.
+</p>
 
-  <p>
-    Os dados são usados exclusivamente para a finalidade única da extensão:
-    criar uma biblioteca pesquisável de páginas lidas pelo usuário e permitir a consulta das cópias posteriormente,
-    inclusive offline. URLs e conteúdo não são usados para publicidade, criação de perfis, venda de dados ou outra finalidade independente.
-  </p>
+<h2>2. Finalidade do uso dos dados</h2>
 
-  <h2>3. Salvamento automático e acesso às páginas</h2>
+<p>
+Os dados são utilizados exclusivamente para criar uma biblioteca pessoal de
+páginas salvas, permitir sua pesquisa e possibilitar a abertura das cópias
+posteriormente, inclusive quando o usuário estiver offline.
+</p>
 
-  <p>
-    O salvamento automático fica desativado por padrão na instalação.
-    Para ativá-lo, o usuário precisa solicitar explicitamente ao Chrome acesso às páginas HTTP/HTTPS.
-    Esse acesso é usado somente para capturar a página ativa após o tempo escolhido pelo usuário.
-    O usuário pode desligar o recurso a qualquer momento; quando desativado, a extensão remove a permissão opcional de host sempre que o Chrome permitir.
-  </p>
+<p>
+As URLs e o conteúdo das páginas não são utilizados para publicidade,
+retargeting, criação de perfis, venda de dados ou qualquer finalidade
+independente da função de arquivamento da extensão.
+</p>
 
-  <h2>4. Armazenamento local</h2>
+<h2>3. Salvamento automático e acesso às páginas</h2>
 
-  <p>
-    As cópias são armazenadas localmente no navegador usando IndexedDB.
-    Não há servidor do desenvolvedor recebendo as páginas salvas.
-    Não usamos analytics, publicidade, rastreadores ou código remoto executável.
-  </p>
+<p>
+O salvamento automático é opcional. Para utilizá-lo, o usuário precisa conceder
+ao Chrome a permissão necessária para que a extensão possa acessar as páginas
+que serão arquivadas.
+</p>
 
-  <h2>5. Imagens</h2>
+<p>
+Essa permissão é utilizada exclusivamente para ler a página ativa, capturar seu
+conteúdo e criar a cópia offline de acordo com as configurações escolhidas pelo
+usuário. O usuário pode desativar o salvamento automático a qualquer momento.
+</p>
 
-  <p>
-    Quando a opção de salvar imagens está habilitada, a extensão tenta baixar algumas imagens dos próprios endereços
-    indicados pela página para incorporá-las à cópia. Essas solicitações são feitas com
-    <code>credentials: omit</code>; a extensão não envia deliberadamente cookies ou credenciais de login para esses servidores.
-    Algumas imagens não poderão ser copiadas e continuarão ausentes da versão offline.
-  </p>
+<h2>4. Armazenamento local</h2>
 
-  <h2>6. Google Drive</h2>
+<p>
+As cópias das páginas são armazenadas localmente no navegador utilizando o
+IndexedDB da extensão. O desenvolvedor não mantém um servidor para receber,
+armazenar ou analisar as páginas salvas pelo usuário.
+</p>
 
-  <p>
-    A sincronização é opcional. O usuário escolhe uma pasta local com o seletor de diretórios do Chrome.
-    A extensão grava as cópias nessa pasta; o Google Drive para computador pode então sincronizar essa pasta
-    com o Google Drive da própria conta do usuário.
-    A extensão não usa a API do Google Drive e não envia as páginas para um servidor controlado pelo desenvolvedor.
-  </p>
+<p>
+A extensão não utiliza publicidade, analytics ou rastreadores para monitorar o
+uso da navegação. Também não utiliza código JavaScript executável hospedado
+remotamente.
+</p>
 
-  <p>
-    Quando o usuário desconecta o Drive, as cópias locais e os arquivos já sincronizados não são apagados automaticamente
-    para evitar perda acidental. O usuário pode removê-los pela própria biblioteca e pelo Google Drive.
-  </p>
+<h2>5. Google Drive</h2>
 
-  <h2>7. Compartilhamento e transferências</h2>
+<p>
+A sincronização com o Google Drive é opcional e controlada pelo usuário.
+O usuário escolhe uma pasta local utilizando o seletor de diretórios do Chrome.
+A extensão grava as cópias das páginas diretamente nessa pasta quando a
+sincronização é realizada.
+</p>
 
-  <p>
-    O desenvolvedor não vende, aluga, compartilha ou fornece a terceiros o conteúdo das páginas salvas.
-    Não há acesso humano do desenvolvedor ao conteúdo arquivado.
-    Qualquer sincronização em nuvem ocorre sob o controle do próprio usuário por meio da pasta do Google Drive escolhida por ele.
-  </p>
+<p>
+Quando essa pasta está sendo sincronizada pelo Google Drive para computador,
+o próprio aplicativo do Google pode transmitir e armazenar os arquivos na
+conta Google do usuário, de acordo com as configurações e os termos aplicáveis
+à conta do usuário.
+</p>
 
-  <h2>8. Segurança</h2>
+<p>
+A extensão não utiliza a API do Google Drive e não envia as páginas para um
+servidor controlado pelo desenvolvedor.
+</p>
 
-  <p>
-    As cópias exibidas pelo visualizador são carregadas em um iframe com sandbox, sem JavaScript e sem formulários.
-    A cópia armazenada remove código executável da página.
-    A extensão não coleta senhas ou chaves privadas deliberadamente e não solicita credenciais bancárias ou de criptomoedas.
-  </p>
+<p>
+Ao desconectar o Google Drive da extensão, os arquivos já existentes na pasta
+não são apagados automaticamente, para evitar perda acidental de dados.
+</p>
 
-  <h2>9. Doações em criptomoedas</h2>
+<h2>6. Compartilhamento e transferências</h2>
 
-  <p>
-    A extensão pode exibir endereços públicos para doações voluntárias em Bitcoin,
-    Bitcoin Lightning (LNURL), Ethereum e Cardano.
-    A extensão não processa pagamentos, não vê a identidade do doador e não solicita chaves privadas ou frases de recuperação.
-    A transação ocorre diretamente na respectiva rede.
-  </p>
+<p>
+O desenvolvedor não vende, aluga, comercializa ou fornece a terceiros o
+conteúdo das páginas armazenadas pela extensão e não tem acesso humano ao
+conteúdo arquivado.
+</p>
 
-  <h2>10. Exclusão e controle</h2>
+<p>
+Quando o usuário escolhe utilizar uma pasta sincronizada pelo Google Drive para
+computador, os arquivos podem ser transferidos e armazenados pelo Google como
+parte do funcionamento desse serviço. Essa sincronização é iniciada por escolha
+do próprio usuário.
+</p>
 
-  <p>
-    O usuário controla sua biblioteca local.
-    Ele pode excluir páginas individuais ou todas as cópias locais pela extensão.
-    Arquivos que já tenham sido sincronizados para o Google Drive não são excluídos automaticamente pela exclusão local,
-    para evitar perda acidental; eles podem ser excluídos diretamente pelo usuário no Drive.
-  </p>
+<h2>7. Segurança</h2>
 
-  <h2>11. Crianças</h2>
+<p>
+As cópias são exibidas por meio de um visualizador com mecanismos de isolamento
+e sanitização. Scripts, formulários, vídeos, áudios e outros elementos
+executáveis ou interativos da página original são removidos da cópia para
+reduzir riscos de execução de conteúdo ativo.
+</p>
 
-  <p>
-    A extensão não é direcionada especificamente a crianças.
-  </p>
+<p>
+A extensão não solicita senhas, chaves privadas, frases de recuperação ou
+credenciais bancárias e não coleta deliberadamente esse tipo de informação.
+</p>
 
-  <h2>12. Alterações</h2>
+<h2>8. Doações em criptomoedas</h2>
 
-  <p>
-    Esta política pode ser atualizada quando a extensão mudar.
-    Alterações relevantes nas práticas de dados serão refletidas nesta página e na descrição da extensão
-    antes de serem usadas de forma diferente.
-  </p>
+<p>
+A extensão pode apresentar endereços públicos para doações voluntárias em
+Bitcoin, Bitcoin Lightning (LNURL), Ethereum e Cardano.
+</p>
 
-  <h2>13. Contato</h2>
+<p>
+A extensão não processa pagamentos, não solicita chaves privadas ou frases de
+recuperação e não coleta informações de identidade dos doadores.
+</p>
 
-  <p>
-    O endereço público de contato é o definido na conta e na página da Chrome Web Store
-    do projeto Memória do Navegador.
-  </p>
+<h2>9. Exclusão e controle pelo usuário</h2>
 
-  <h2>Declaração de Limited Use</h2>
+<p>
+O usuário controla sua biblioteca local e pode excluir páginas individuais ou
+remover suas cópias armazenadas pela extensão.
+</p>
 
-  <p>
-    O acesso a conteúdo de páginas e atividade de navegação é usado somente para fornecer a função de arquivamento
-    e pesquisa descrita claramente na página da Chrome Web Store e na interface da extensão.
-    Não usamos esses dados para publicidade personalizada, retargeting ou criação de perfis e não os transferimos
-    para terceiros, exceto quando necessário para a função escolhida pelo usuário, como a sincronização pelo armazenamento
-    controlado pelo próprio usuário.
-  </p>
+<p>
+Arquivos que já tenham sido sincronizados para uma pasta do Google Drive não
+são apagados automaticamente quando uma cópia local é excluída. Esses arquivos
+podem ser removidos pelo próprio usuário diretamente da pasta sincronizada ou
+do Google Drive.
+</p>
+
+<h2>10. Crianças</h2>
+
+<p>
+A extensão não é direcionada especificamente a crianças.
+</p>
+
+<h2>11. Alterações nesta política</h2>
+
+<p>
+Esta política poderá ser atualizada quando a extensão mudar. Alterações
+relevantes nas práticas de tratamento de dados serão refletidas nesta página
+antes de serem utilizadas para uma finalidade diferente.
+</p>
+
+<h2>12. Contato</h2>
+
+<p>
+Para dúvidas sobre esta política ou sobre o tratamento de dados pela extensão,
+entre em contato pelo endereço:
+<a href="mailto:memoriadonavegador@gmail.com">
+memoriadonavegador@gmail.com
+</a>
+</p>
+
+<h2>Declaração de Limited Use</h2>
+
+<p>
+O acesso ao conteúdo das páginas e à atividade de navegação é utilizado
+exclusivamente para fornecer a função de arquivamento e pesquisa descrita
+claramente na Chrome Web Store e na interface da extensão.
+</p>
+
+<p>
+Esses dados não são utilizados para publicidade personalizada, retargeting,
+criação de perfis ou qualquer finalidade não relacionada à funcionalidade
+principal da extensão.
+</p>
+
+<p>
+O desenvolvedor não transfere esses dados para terceiros. A única transferência
+externa prevista é aquela iniciada pelo próprio usuário ao utilizar uma pasta
+sincronizada pelo Google Drive para computador, caso em que o Google poderá
+receber e armazenar os arquivos de acordo com as configurações e os termos da
+conta do usuário.
+</p>
 
 </body>
 </html>
